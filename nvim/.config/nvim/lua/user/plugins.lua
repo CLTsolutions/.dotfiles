@@ -45,11 +45,14 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- have packer manage itself
   use "nvim-lua/popup.nvim" -- an implementation of the popup API from vim in neovim
   use "nvim-lua/plenary.nvim" -- useful lua functions used by many plugins
-  use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview' }
+  use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install' }
   use "p00f/nvim-ts-rainbow" -- like Colorizer extension from VS Code
   use "windwp/nvim-autopairs" -- integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- easily comment stuff
   use "lewis6991/gitsigns.nvim"
+  use "nvim-lualine/lualine.nvim"
+  use "akinsho/toggleterm.nvim"
+  use "folke/which-key.nvim"
 
     -- bufferline
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'} -- buffer tabs
@@ -57,7 +60,8 @@ return packer.startup(function(use)
 
    -- color schemes
   use { 'folke/tokyonight.nvim', as = 'tokyo night' }
-  use { 'rose-pine/neovim', as = 'rose-pine', disable = true, }
+  use { 'rose-pine/neovim', as = 'rose-pine', disable = true }
+  use { 'marko-cerovac/material.nvim', as = 'material', disable = true }
 
    -- cmp plugins
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -69,6 +73,7 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
 
       -- nvim tree
+  -- use { 'kyazdani42/nvim-tree.lua', commit = '2e1f82d8c0c57cbc2bfdc041a3aff26947559a1e' }
   use 'kyazdani42/nvim-tree.lua'
   use 'kyazdani42/nvim-web-devicons'
    -- snippets
@@ -82,6 +87,7 @@ return packer.startup(function(use)
 
   -- telescope
   use "nvim-telescope/telescope.nvim"
+  use "sharkdp/fd" -- finds entries in file system
 
   -- treesitter
   use {

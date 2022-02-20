@@ -25,7 +25,12 @@ lsp_installer.on_server_ready(function(server)
 	 if server.name == "pyright" then
 	 	local pyright_opts = require("user.lsp.settings.pyright")
 	 	opts = vim.tbl_deep_extend("force", pyright_opts, opts)
-	 end
+   end
+
+	 if server.name == "remark_ls" then
+	 	local remark_ls_opts = require("user.lsp.settings.remark_ls")
+	 	opts = vim.tbl_deep_extend("force", remark_ls_opts, opts)
+	end
 
 	-- this setup() function is exactly the same as lspconfig's setup function.
 	-- refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md

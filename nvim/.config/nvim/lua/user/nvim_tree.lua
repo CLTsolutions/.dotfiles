@@ -78,7 +78,7 @@ nvim_tree.setup {
     mappings = {
       custom_only = false,
       list = {
-        { key = { "h", "<CR>", "o" }, cb = tree_cb "edit" },
+        { key = { "h", "<CR>", "o" }, action = "edit" },
         { key = "l", cb = tree_cb "close_node" },
         { key = "v", cb = tree_cb "vsplit" },
       },
