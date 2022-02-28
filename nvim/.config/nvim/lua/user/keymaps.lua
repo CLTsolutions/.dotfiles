@@ -39,7 +39,7 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
--- netrw
+  -- netrw
 keymap("n", "<leader>e", ":Lex 30<CR>", opts)
 
   -- resize with arrows
@@ -59,6 +59,9 @@ keymap("n", "<leader>c", ":noh<CR>", opts)
   -- move text up and down quickly
 keymap("n", "∆", ":m .+1<CR>==", opts)
 keymap("n", "˚", ":m .-2<CR>==", opts)
+
+  -- markdown preview
+keymap("n", "<leader>m", ":MarkdownPreview<CR>", opts)
 
 --========
 -- VISUAL

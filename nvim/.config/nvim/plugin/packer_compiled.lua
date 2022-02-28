@@ -234,6 +234,11 @@ _G.packer_plugins = {
     path = "/Users/batheart/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
   },
+  ["vscode-es7-javascript-react-snippets"] = {
+    loaded = true,
+    path = "/Users/batheart/.local/share/nvim/site/pack/packer/start/vscode-es7-javascript-react-snippets",
+    url = "https://github.com/dsznajder/vscode-es7-javascript-react-snippets"
+  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/Users/batheart/.local/share/nvim/site/pack/packer/start/which-key.nvim",

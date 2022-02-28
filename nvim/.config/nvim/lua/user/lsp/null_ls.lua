@@ -20,8 +20,8 @@ null_ls.setup {
       extra_filetypes = { "toml", "solidity" },
       extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
     },
-    -- formatting.rubocop,
-    formatting.rufo,
+    formatting.rubocop,
+    -- formatting.rufo,
     formatting.stylua
   },
 }

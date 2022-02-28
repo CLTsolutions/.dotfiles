@@ -53,6 +53,10 @@ return packer.startup(function(use)
   use "nvim-lualine/lualine.nvim"
   use "akinsho/toggleterm.nvim"
   use "folke/which-key.nvim"
+  use {
+    'dsznajder/vscode-es7-javascript-react-snippets',
+    run = 'yarn install --frozen-lockfile && yarn compile'
+  }
 
     -- bufferline
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'} -- buffer tabs
@@ -66,11 +70,11 @@ return packer.startup(function(use)
    -- cmp plugins
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lua" -- cmdline completions
   use "hrsh7th/cmp-nvim-lsp" -- cmdline completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/nvim-cmp" -- the completion plugin
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
 
       -- nvim tree
   -- use { 'kyazdani42/nvim-tree.lua', commit = '2e1f82d8c0c57cbc2bfdc041a3aff26947559a1e' }
@@ -83,7 +87,7 @@ return packer.startup(function(use)
    -- lsp
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  use "jose-elias-alvarez/null-ls.nvim" -- formatting
+  use "jose-elias-alvarez/null-ls.nvim" -- formatting and linters
 
   -- telescope
   use "nvim-telescope/telescope.nvim"
