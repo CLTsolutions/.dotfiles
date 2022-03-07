@@ -184,6 +184,11 @@ _G.packer_plugins = {
     path = "/Users/batheart/.local/share/nvim/site/pack/packer/start/nvim-treesitter-endwise",
     url = "https://github.com/RRethy/nvim-treesitter-endwise"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/Users/batheart/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
+  },
   ["nvim-ts-context-commentstring"] = {
     loaded = true,
     path = "/Users/batheart/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
@@ -233,6 +238,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/batheart/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/Users/batheart/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   },
   ["vscode-es7-javascript-react-snippets"] = {
     loaded = true,

@@ -22,6 +22,11 @@ lsp_installer.on_server_ready(function(server)
 	 	opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
   end
 
+  -- if server.name == "solargraph" then
+	 -- 	local solargraph_opts = require("user.lsp.settings.solargraph")
+	 -- 	opts = vim.tbl_deep_extend("force", solargraph_opts, opts)
+  -- end
+
 	-- this setup() function is exactly the same as lspconfig's setup function.
 	-- refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 	server:setup(opts)

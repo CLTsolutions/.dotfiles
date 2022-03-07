@@ -46,7 +46,7 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- an implementation of the popup API from vim in neovim
   use "nvim-lua/plenary.nvim" -- useful lua functions used by many plugins
   use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install' }
-  use "p00f/nvim-ts-rainbow" -- like Colorizer extension from VS Code
+  use "p00f/nvim-ts-rainbow" -- like bracket pair colorizer extension from VS Code
   use "windwp/nvim-autopairs" -- integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- easily comment stuff
   use "lewis6991/gitsigns.nvim"
@@ -57,10 +57,14 @@ return packer.startup(function(use)
     'dsznajder/vscode-es7-javascript-react-snippets',
     run = 'yarn install --frozen-lockfile && yarn compile'
   }
+  use "RRethy/nvim-treesitter-endwise" -- adds "end" in ruby, Lua, Vimscript, etc
+  use "norcalli/nvim-colorizer.lua"
+  use "tpope/vim-surround" -- surroundings for "", '', (), {}, etc
+  use "windwp/nvim-ts-autotag" -- uses treesitter to autoclose/rename tags
 
     -- bufferline
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'} -- buffer tabs
-  use "moll/vim-bbye"
+  use "moll/vim-bbye" -- provides :Bdelete! to close buffer with <C-w>
 
    -- color schemes
   use { 'folke/tokyonight.nvim', as = 'tokyo night' }
@@ -76,10 +80,11 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/nvim-cmp" -- the completion plugin
 
-      -- nvim tree
+   -- nvim tree
   -- use { 'kyazdani42/nvim-tree.lua', commit = '2e1f82d8c0c57cbc2bfdc041a3aff26947559a1e' }
   use 'kyazdani42/nvim-tree.lua'
   use 'kyazdani42/nvim-web-devicons'
+
    -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
@@ -90,7 +95,7 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- formatting and linters
 
   -- telescope
-  use "nvim-telescope/telescope.nvim"
+  use { "nvim-telescope/telescope.nvim", commit = "76120285f88c1becb5728695f6df77c545437c53" }
   use "sharkdp/fd" -- finds entries in file system
 
   -- treesitter
@@ -99,10 +104,6 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
-
-  -- adds "end" in ruby, Lua, Vimscript, etc
-  use "RRethy/nvim-treesitter-endwise"
-  use "norcalli/nvim-colorizer.lua"
 
   -- automatically set up configuration after cloning packer.nvim
   -- put this at the end after all plugins

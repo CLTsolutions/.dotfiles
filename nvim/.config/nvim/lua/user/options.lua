@@ -34,6 +34,7 @@ local options = {
   wrap = false,                            -- display lines as one long line
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
+  tildeop = true                           -- tilde becomes operator (must be followed by motions)
   -- guifont = "FiraCodeIScript:size=12",               -- the font used in graphical neovim applications
 }
 
