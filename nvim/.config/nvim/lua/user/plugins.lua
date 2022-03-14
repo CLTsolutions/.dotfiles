@@ -68,7 +68,7 @@ return packer.startup(function(use)
 
    -- color schemes
   use { 'folke/tokyonight.nvim', as = 'tokyo night' }
-  use { 'rose-pine/neovim', as = 'rose-pine', disable = true }
+  use { 'rose-pine/neovim', as = 'rose-pine', disable = false }
   use { 'marko-cerovac/material.nvim', as = 'material', disable = true }
 
    -- cmp plugins
