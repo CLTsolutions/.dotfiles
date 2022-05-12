@@ -51,7 +51,7 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim" -- easily comment stuff
   use "lewis6991/gitsigns.nvim"
   use "nvim-lualine/lualine.nvim"
-  use "akinsho/toggleterm.nvim"
+  use { "akinsho/toggleterm.nvim", tag = "v1.*" }
   use "folke/which-key.nvim"
   use {
     'dsznajder/vscode-es7-javascript-react-snippets',
@@ -63,7 +63,7 @@ return packer.startup(function(use)
   use "windwp/nvim-ts-autotag" -- uses treesitter to autoclose/rename tags
 
     -- bufferline
-  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'} -- buffer tabs
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'} -- buffer tabs
   use "moll/vim-bbye" -- provides :Bdelete! to close buffer with <C-w>
 
    -- color schemes
