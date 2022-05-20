@@ -48,10 +48,12 @@ keymap("n", "<C-d>", ":resize -2<CR>", opts)
 keymap("n", "<C-a>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-f>", ":vertical resize +2<CR>", opts)
 
-  -- navigate and remove buffers
+  -- navigate, remove, and reorder buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<C-w>", ":Bdelete!<CR>", opts)
+keymap("n", "<leader>n", ":BufferLineMoveNext<CR>", opts)
+keymap("n", "<leader>p", ":BufferLineMovePrev<CR>", opts)
 
   -- remove highlight after search
 keymap("n", "<leader>c", ":noh<CR>", opts)
