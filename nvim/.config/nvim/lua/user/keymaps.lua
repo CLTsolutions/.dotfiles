@@ -58,12 +58,24 @@ keymap("n", "<leader>p", ":BufferLineMovePrev<CR>", opts)
   -- remove highlight after search
 keymap("n", "<leader>c", ":noh<CR>", opts)
 
-  -- move text up and down quickly
+  -- move text up and down quickly (like in vs code)
 keymap("n", "∆", ":m .+1<CR>==", opts)
 keymap("n", "˚", ":m .-2<CR>==", opts)
 
   -- markdown preview
 keymap("n", "<leader>m", ":MarkdownPreview<CR>", opts)
+
+  -- TELESCOPE
+    -- find and grep files
+-- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes'))<cr>", opts)
+keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find()<cr>", opts)
+keymap("n", "<leader>g", "<cmd>lua require'telescope.builtin'.live_grep()<cr>", opts)
+keymap("n", "<leader>gs", "<cmd>lua require'telescope.builtin'.grep_string()<cr>", opts)
+keymap("n", "<leader>b", "<cmd>lua require'telescope.builtin'.buffers()<cr>", opts)
+    -- git
+keymap("n", "<leader>gc", "<cmd>lua require'telescope.builtin'.git_bcommits()<cr>", opts)
+keymap("n", "<leader>gs", "<cmd>lua require'telescope.builtin'.git_status()<cr>", opts)
 
 --========
 -- VISUAL
@@ -89,10 +101,6 @@ keymap("x", "∆", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "˚", ":move '<-2<CR>gv-gv", opts)
 
 
--- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes'))<cr>", opts)
-keymap("n", "<leader>g", "<cmd>lua require'telescope.builtin'.live_grep()<cr>", opts)
-keymap("n", "<leader>b", "<cmd>lua require'telescope.builtin'.buffers()<cr>", opts)
 
 --==========
 -- TERMINAL
