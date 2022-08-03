@@ -69,7 +69,9 @@ return packer.startup(function(use)
    -- color schemes
   use { 'folke/tokyonight.nvim', as = 'tokyo night' }
   use { 'rose-pine/neovim', as = 'rose-pine', disable = false }
-  use { 'marko-cerovac/material.nvim', as = 'material', disable = true }
+  use { 'marko-cerovac/material.nvim', as = 'material', disable = false }
+  use { 'Mofiqul/dracula.nvim', as = 'dracula' }
+  use { 'EdenEast/nightfox.nvim', as = 'nightfox' }
 
    -- cmp plugins
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -102,6 +104,7 @@ return packer.startup(function(use)
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
+    commit = "22824614163c54ef5d366b15c8685e24d33763db"
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
