@@ -101,10 +101,9 @@ return packer.startup(function(use)
   use "sharkdp/fd" -- finds entries in file system
 
   -- treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter",
+  use { "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
-    commit = "22824614163c54ef5d366b15c8685e24d33763db"
+    commit = "3bd228781bf4a927c5ceaf7a4687fed9f96d12b5"
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
