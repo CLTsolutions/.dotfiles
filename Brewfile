@@ -1,3 +1,4 @@
+# Run brew bundle dump to create Brewfile in cwd
 # Run "brew bundle install --file /path/to/Brewfile"
 # https://apple.stackexchange.com/questions/414225/brew-create-install-script-for-all-installed-packages-casks
 
@@ -24,6 +25,7 @@ brew "neovim"                            # Ambitious Vim-fork focused on extensi
 brew "nghttp2"                           # HTTP/2 C Library
 brew "node"                              # Platform built on V8 to build network applications
 brew "nvm"                               # Manage multiple Node.js versions
+brew "pgcli"                             # CLI for Postgres with auto-completion and syntax highlighting
 brew "postgresql", restart_service: true # Object-relational database system
 brew "postgresql@13"                     # Object-relational database system
 brew "ruby-build"                        # Install various Ruby versions and implementations
@@ -38,6 +40,11 @@ brew "yarn"                              # JavaScript package manager
 # programs
 # ########
 brew "heroku/brew/heroku"                # Everything you need to get started with Heroku
+cask "alfred"                            # Application launcher and productivity software
+cask "brave-browser"                     # Web browser focusing on privacy
 cask "github"                            # Desktop client for GitHub repositories
 cask "iterm2"                            # Terminal emulator as alternative to Apple's Terminal app
-cask "brave-browser"                     # Web browser focusing on privacy
+cask "slack"                             # Team communication and collaboration software
+cask "stats"                             # System monitor for the menu bar
+cask "telegram"                          # Messaging app with a focus on speed and security
+cask "vlc"                               # Multimedia player
