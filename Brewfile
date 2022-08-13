@@ -1,3 +1,6 @@
+# Run "brew bundle install --file /path/to/Brewfile"
+# https://apple.stackexchange.com/questions/414225/brew-create-install-script-for-all-installed-packages-casks
+
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
