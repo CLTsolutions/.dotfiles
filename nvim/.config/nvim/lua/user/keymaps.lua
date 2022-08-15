@@ -42,11 +42,15 @@ keymap("n", "<C-l>", "<C-w>l", opts)
   -- netrw
 keymap("n", "<leader>e", ":Lex 30<CR>", opts)
 
+  -- nvimtree
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>o", ":Format<CR>", opts)
+
   -- resize with arrows
-keymap("n", "<C-s>", ":resize +2<CR>", opts)
+keymap("n", "<C-u>", ":resize +2<CR>", opts)
 keymap("n", "<C-d>", ":resize -2<CR>", opts)
 keymap("n", "<C-a>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-f>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-g>", ":vertical resize +2<CR>", opts)
 
   -- navigate, remove, and reorder buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
@@ -77,6 +81,9 @@ keymap("n", "<leader>b", "<cmd>lua require'telescope.builtin'.buffers()<cr>", op
 keymap("n", "<leader>gc", "<cmd>lua require'telescope.builtin'.git_bcommits()<cr>", opts)
 keymap("n", "<leader>gs", "<cmd>lua require'telescope.builtin'.git_status()<cr>", opts)
 
+
+keymap("n", "Ω",":lua ToggleWordWrap()<CR>", opts)
+
 --========
 -- VISUAL
 --========
@@ -100,17 +107,25 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "∆", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "˚", ":move '<-2<CR>gv-gv", opts)
 
-
-
 --==========
 -- TERMINAL
 --==========
--- better terminal navigation
+  -- better terminal navigation
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
--- nvimtree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
-keymap("n", "<leader>o", ":Format<CR>", opts)
+--=======
+-- OTHER
+--=======
+  -- word wrap
+function ToggleWordWrap()
+    if vim.wo.wrap == true then
+        vim.wo.wrap = false
+        print("line wrap is OFF")
+    else
+        vim.wo.wrap = true
+        print("line wrap is ON")
+    end
+end
