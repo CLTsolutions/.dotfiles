@@ -49,7 +49,7 @@ keymap("n", "<leader>o", ":Format<CR>", opts)
   -- resize with arrows
 keymap("n", "<C-u>", ":resize +2<CR>", opts)
 keymap("n", "<C-d>", ":resize -2<CR>", opts)
-keymap("n", "<C-a>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-s>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-g>", ":vertical resize +2<CR>", opts)
 
   -- navigate, remove, and reorder buffers
