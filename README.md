@@ -2,7 +2,7 @@
 
 ## Installing
 
-_[Video](https://youtu.be/90xMTKml9O0) with step-by-step instructions for storying dotfiles as symlinks_
+_[Video](https://youtu.be/90xMTKml9O0) with step-by-step instructions for storing dotfiles as symlinks_
 
 You will need `git` and [`GNU stow`](https://www.gnu.org/software/stow/).
 

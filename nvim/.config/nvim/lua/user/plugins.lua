@@ -51,7 +51,7 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim" -- easily comment stuff
   use "lewis6991/gitsigns.nvim"
   use "nvim-lualine/lualine.nvim"
-  use { "akinsho/toggleterm.nvim", tag = "v1.*" }
+  use { "akinsho/toggleterm.nvim", tag = "*" }
   use "folke/which-key.nvim"
   use {
     'dsznajder/vscode-es7-javascript-react-snippets',
@@ -62,18 +62,19 @@ return packer.startup(function(use)
   use "tpope/vim-surround" -- surroundings for "", '', (), {}, etc
   use "windwp/nvim-ts-autotag" -- uses treesitter to autoclose/rename tags
 
-    -- bufferline
-  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'} -- buffer tabs
+  -- bufferline
+  use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'kyazdani42/nvim-web-devicons' } -- buffer tabs
   use "moll/vim-bbye" -- provides :Bdelete! to close buffer with <C-w>
 
-   -- color schemes
-  use { 'folke/tokyonight.nvim', as = 'tokyo night' }
-  use { 'rose-pine/neovim', as = 'rose-pine', disable = false }
-  use { 'marko-cerovac/material.nvim', as = 'material', disable = false }
+  -- color schemes
+  use { "catppuccin/nvim", as = "catppuccin" }
   use { 'Mofiqul/dracula.nvim', as = 'dracula' }
+  use { 'marko-cerovac/material.nvim', as = 'material' }
   use { 'EdenEast/nightfox.nvim', as = 'nightfox' }
+  use { 'rose-pine/neovim', as = 'rose-pine' }
+  use { 'folke/tokyonight.nvim', as = 'tokyonight' }
 
-   -- cmp plugins
+  -- cmp plugins
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
@@ -82,16 +83,16 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/nvim-cmp" -- the completion plugin
 
-   -- nvim tree
+  -- nvim tree
   -- use { 'kyazdani42/nvim-tree.lua', commit = '2e1f82d8c0c57cbc2bfdc041a3aff26947559a1e' }
   use 'kyazdani42/nvim-tree.lua'
   use 'kyazdani42/nvim-web-devicons'
 
-   -- snippets
+  -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
-   -- lsp
+  -- lsp
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "jose-elias-alvarez/null-ls.nvim" -- formatting and linters
@@ -101,10 +102,14 @@ return packer.startup(function(use)
   use "sharkdp/fd" -- finds entries in file system
 
   -- treesitter
-  use { "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
-    commit = "3bd228781bf4a927c5ceaf7a4687fed9f96d12b5"
-  }
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  --[[ use { ]]
+  --[[   'nvim-treesitter/nvim-treesitter', ]]
+  --[[   run = function() ]]
+  --[[     local ts_update = require('nvim-treesitter.install').update({ with_sync = true }) ]]
+  --[[     ts_update() ]]
+  --[[   end, ]]
+  --[[ } ]]
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- automatically set up configuration after cloning packer.nvim

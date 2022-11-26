@@ -23,7 +23,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'norcalli/nvim-colorizer.lua'
 
 " colorschemes
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+" Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'drewtempelmeyer/palenight.vim'
 
