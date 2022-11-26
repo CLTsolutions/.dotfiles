@@ -9,7 +9,12 @@ You will need `git` and [`GNU stow`](https://www.gnu.org/software/stow/).
 Clone into your `$HOME` directory or `~`
 
 ```bash
-git clone git@github.com:CLTsolutions/.dotfiles.git ~
+git clone git@github.com:CLTsolutions/.dotfiles.git
+```
+
+`cd` into `.dotfiles` directory
+```bash
+cd .dotfiles
 ```
 
 Run `stow` to symlink everything or just select what you want
