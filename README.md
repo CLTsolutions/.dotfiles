@@ -10,10 +10,6 @@ Clone into your `$HOME` directory or `~`
 
 ```bash
 git clone git@github.com:CLTsolutions/.dotfiles.git
-```
-
-`cd` into `.dotfiles` directory
-```bash
 cd .dotfiles
 ```
 
