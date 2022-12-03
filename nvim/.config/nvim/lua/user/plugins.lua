@@ -14,8 +14,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
-
--- autocommand that reloads neovim whenever you save the plugins.lua file
+-- autocommand to reload neovim whenever plugins.lua file is saved
 vim.cmd [[
   augroup packer_user_config
     autocmd!
@@ -23,7 +22,7 @@ vim.cmd [[
   augroup end
 ]]
 
--- use a protected call so packer doesn't error out on first use
+-- use a protected call so packer doesn't error on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
   vim.notify("Packer failed")
@@ -46,8 +45,8 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- an implementation of the popup API from vim in neovim
   use "nvim-lua/plenary.nvim" -- useful lua functions used by many plugins
   use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install' }
-  use "p00f/nvim-ts-rainbow" -- like bracket pair colorizer extension from VS Code
   use "windwp/nvim-autopairs" -- integrates with both cmp and treesitter
+  use "p00f/nvim-ts-rainbow" -- like bracket pair colorizer extension from VS Code
   use "numToStr/Comment.nvim" -- easily comment stuff
   use "lewis6991/gitsigns.nvim"
   use "nvim-lualine/lualine.nvim"
@@ -94,8 +93,10 @@ return packer.startup(function(use)
 
   -- lsp
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "williamboman/mason.nvim" -- simple to use language server installer
+  use "williamboman/mason-lspconfig.nvim"
   use "jose-elias-alvarez/null-ls.nvim" -- formatting and linters
+  use "RRethy/vim-illuminate"
 
   -- telescope
   use { "nvim-telescope/telescope.nvim", commit = "76120285f88c1becb5728695f6df77c545437c53" }

@@ -14,13 +14,15 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup {
   debug = false,
   sources = {
+    diagnostics.markdownlint,
     diagnostics.eslint,
     diagnostics.rubocop,
-    -- formatting.eslint,
+    formatting.eslint,
     formatting.prettier.with {
       extra_filetypes = { "toml", "solidity" },
       extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
     },
+    formatting.markdownlint,
     formatting.rubocop,
     -- formatting.rufo,
     formatting.stylua,

@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 
 -- shorten function name
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 -- remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -44,7 +44,6 @@ keymap("n", "<leader>e", ":Lex 30<CR>", opts)
 
   -- nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
-keymap("n", "<leader>o", ":Format<CR>", opts)
 
   -- resize with arrows
 keymap("n", "<C-u>", ":resize +2<CR>", opts)
