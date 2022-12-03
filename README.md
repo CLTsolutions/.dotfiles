@@ -2,7 +2,8 @@
 
 ## Installing
 
-_[Video](https://youtu.be/90xMTKml9O0) with step-by-step instructions for storing dotfiles as symlinks_
+_[Video](https://youtu.be/90xMTKml9O0) with step-by-step instructions
+for storing dotfiles as symlinks._
 
 You will need `git` and [`GNU stow`](https://www.gnu.org/software/stow/).
 
@@ -43,7 +44,8 @@ For solargraph to work in projects that include a `.rubocop.yml` file in their r
 
 _See this [issue](https://github.com/LunarVim/LunarVim/issues/945)_
 
-````ruby
+```ruby
 require('lspconfig').solargraph.setup {
  cmd = { "solargraph", "stdio" }
 }
+```
