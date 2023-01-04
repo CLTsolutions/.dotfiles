@@ -3,6 +3,8 @@ if not status_ok then
   return
 end
 
+local mocha = require("catppuccin.palettes").get_palette "mocha"
+
 bufferline.setup {
   options = {
     -- For 8|² -
@@ -16,7 +18,10 @@ bufferline.setup {
     -- NOTE: this plugin is designed with this icon in mind,
     -- and so changing this is NOT recommended, this is intended
     -- as an escape hatch for people who cannot bear it for whatever reason
-    indicator_icon = '▎',
+    indicator = {
+      icon = '▎', -- should be omitted if indicator style is not 'icon'
+      style = 'icon' -- 'icon' | 'underline' | 'none'
+    },
     buffer_close_icon = '',
     modified_icon = '●',
     close_icon = '',
@@ -78,15 +83,25 @@ bufferline.setup {
     --   return buffer_a.modified > buffer_b.modified
     -- end
   },
-    highlights = {
-    fill = {
-      fg = { attribute = "fg", highlight = "#ff0000" },
-      bg = { attribute = "bg", highlight = "TabLine" },
+  highlights = require("catppuccin.groups.integrations.bufferline").get {
+    --[[ styles = { "italic", "bold" }, ]]
+    custom = {
+        all = {
+            fill = { bg = "#000000" },
+        },
+        mocha = {
+            background = { fg = mocha.text },
+        },
     },
-    background = {
-      fg = { attribute = "fg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
-    },
+  --[[ highlights = { ]]
+  --[[   fill = { ]]
+  --[[     fg = { attribute = "fg", highlight = "#ff0000" }, ]]
+  --[[     bg = { attribute = "bg", highlight = "TabLine" }, ]]
+  --[[   }, ]]
+  --[[   background = { ]]
+  --[[     fg = { attribute = "fg", highlight = "TabLine" }, ]]
+  --[[     bg = { attribute = "bg", highlight = "TabLine" }, ]]
+  --[[   }, ]]
 
     -- buffer_selected = {
     --   fg = {attribute='fg',highlight='#ff0000'},
@@ -172,5 +187,3 @@ bufferline.setup {
     },
   },
 }
-
-

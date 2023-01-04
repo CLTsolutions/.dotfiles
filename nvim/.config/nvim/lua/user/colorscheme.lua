@@ -1,12 +1,13 @@
--- local colorscheme = "tokyonight"
--- local colorscheme = "rose-pine"
+local colorscheme = "catppuccin-mocha" -- catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+-- local colorscheme = "dracula"
 -- local colorscheme = "material"
-local colorscheme = "dracula"
+-- local colorscheme = "rose-pine"
+-- local colorscheme = "tokyonight"
 
 -- ============
 -- colorschemes
 -- ============
-  -- tokyo night
+  -- tokyonight
 vim.g.tokyonight_style = "night" -- options: "storm," "night," "day"
 vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
       -- change theme colors
