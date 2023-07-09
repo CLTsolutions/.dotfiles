@@ -1,3 +1,15 @@
+# created by zap installer
+[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
+plug "zsh-users/zsh-autosuggestions"
+plug "zap-zsh/supercharge"
+plug "zsh-users/zsh-syntax-highlighting"
+plug "chivalryq/git-alias"
+plug "MichaelAquilina/zsh-you-should-use"
+
+# load and initialise completion system
+autoload -Uz compinit
+compinit
+
 # history
 HISTFILE=~/.zsh_history
 
@@ -17,7 +29,7 @@ export VISUAL="nvim"
 # aliases
 # plug "$HOME/.config/zsh/aliases.zsh"
 if [ -f ~/.config/zsh/aliases.zsh ]; then
-    source $HOME/.config/zsh/aliases.zsh
+    plug $HOME/.config/zsh/aliases.zsh
 else
     print "404: ~/.config/zsh/aliases.zsh not found."
 fi
