@@ -30,8 +30,8 @@ export NVM_DIR="$HOME/.nvm"
 # rails
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# starship prompt
-# eval "$(starship init zsh)"
-
 # my stuff
 fortune -n short | cowsay -f kitty | lolcat
+
+# starship prompt
+eval "$(starship init zsh)"
