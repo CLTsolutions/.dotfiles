@@ -120,11 +120,11 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 --=======
   -- word wrap
 function ToggleWordWrap()
-    if vim.wo.wrap == true then
-        vim.wo.wrap = false
-        print("line wrap is OFF")
-    else
-        vim.wo.wrap = true
-        print("line wrap is ON")
-    end
+  if vim.wo.wrap then
+      vim.wo.wrap = false
+      print("line wrap is OFF")
+  else
+      vim.wo.wrap = true
+      print("line wrap is ON")
+  end
 end

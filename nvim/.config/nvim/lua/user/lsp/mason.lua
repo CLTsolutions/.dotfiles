@@ -5,7 +5,8 @@ local servers = {
   "jsonls",
   "marksman",
   "pyright",
-	"sumneko_lua",
+	"lua_ls",
+  'solargraph',
 	"tsserver",
 	"yamlls",
 }
