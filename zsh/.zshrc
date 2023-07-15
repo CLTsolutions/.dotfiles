@@ -14,7 +14,7 @@ compinit
 HISTFILE=~/.zsh_history
 
 # prompt
-PROMPT='%n in %~ -> '
+# PROMPT='%n in %~ -> '
 
 # preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
