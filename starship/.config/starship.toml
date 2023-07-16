@@ -1,5 +1,4 @@
-# renders time on right side and top line
-# of two line prompt
+# renders time on right side and top line of two line prompt
 format = """
 $all\
 $fill\
@@ -15,6 +14,10 @@ symbol = " "
 disabled = false
 style = "fg:#f5c2e7"
 format = "[$time]($style)"
+
+# replace the "❯" symbol in the prompt
+[character]
+success_symbol = "[➜](bold green)"
 
 [aws]
 symbol = "  "
@@ -35,6 +38,7 @@ symbol = " "
 read_only = " 󰌾"
 
 [docker_context]
+disabled = true
 symbol = " "
 
 [elixir]
@@ -48,6 +52,18 @@ symbol = " "
 
 [git_branch]
 symbol = " "
+
+# [git_status]
+# conflicted = "🏳️"
+# ahead = "🏎️💨"
+# behind = "😰"
+# diverged = "🫨"
+# untracked = "🤷🏻‍♀️"
+# stashed = "📦"
+# modified = "✍🏻"
+# staged = '[++\($count\)](bold green)'
+# renamed = "💬"
+# deleted = "🗑️"
 
 [golang]
 symbol = " "
@@ -89,6 +105,7 @@ symbol = "󰆥 "
 symbol = " "
 
 [nodejs]
+disabled = true
 symbol = " "
 
 [os.symbols]
@@ -145,6 +162,7 @@ symbol = " "
 symbol = "󰟔 "
 
 [ruby]
+disabled = true
 symbol = " "
 
 [rust]
@@ -155,4 +173,3 @@ symbol = " "
 
 [spack]
 symbol = "🅢 "
-
