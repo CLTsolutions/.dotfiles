@@ -16,6 +16,9 @@ disabled = false
 style = "fg:#f5c2e7"
 format = "[$time]($style)"
 
+[character]
+success_symbol = "[➜](bold green)"
+
 [aws]
 symbol = "  "
 
@@ -155,4 +158,3 @@ symbol = " "
 
 [spack]
 symbol = "🅢 "
-
